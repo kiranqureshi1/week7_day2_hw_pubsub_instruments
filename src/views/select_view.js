@@ -7,10 +7,11 @@ const SelectView = function(element) {
 };
 
 SelectView.prototype.bindEvents = function(){
+
   PubSub.subscribe('whole instrument data', (event) => {
     const allInstruments = event.detail;
     console.log(allInstruments);
-    console.log('hfff');
+    console.log('data received');
     this.populate(allInstruments);
   });
 

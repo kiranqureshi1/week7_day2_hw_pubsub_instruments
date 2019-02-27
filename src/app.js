@@ -10,8 +10,6 @@ const InstrumentInfoView = require('./views/instrument_info_view.js');
 document.addEventListener('DOMContentLoaded', () => {
   console.log('JavaScript Loaded');
   console.log('shhshhsshhs');
-  const InstrumentDataModel = new InstrumentFamilies(instrumentFamilyData);
-  InstrumentDataModel.bindEvents();
 
 
   // document.addEventListener('DOMContentLoaded', () => {
@@ -30,6 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const selectView = new SelectView(infoDiv);
   console.log('hey');
   selectView.bindEvents();
+
+  const InstrumentDataModel = new InstrumentFamilies(instrumentFamilyData);
+  InstrumentDataModel.bindEvents();
+
 
   const infoDiva = document.querySelector('div#instrument-info')
   const instrumentInfoViewInfoDisplay = new InstrumentInfoView(infoDiva);
